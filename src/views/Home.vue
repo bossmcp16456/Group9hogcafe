@@ -12,7 +12,7 @@
                       <v-card-text class="mt-12">
                         <h1
                           class="text-center display-2 teal--text text--accent-3"
-                        >Sign in to Diprella</h1>
+                        >Sign in to Hog Cafe</h1>
                         <div class="text-center mt-4">
                           <v-btn class="mx-2" fab color="black" outlined>
                             <v-icon>fab fa-facebook-f</v-icon>
@@ -47,7 +47,7 @@
                         <h3 class="text-center mt-4">Forgot your password ?</h3>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn rounded color="teal accent-3" dark>SIGN IN</v-btn>
+                        <v-btn rounded color="teal accent-3" dark href="/Lobby">SIGN IN</v-btn>
                       </div>
                     </v-col>
                     <v-col cols="12" md="4" class="teal accent-3">
@@ -120,7 +120,8 @@
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn rounded color="teal accent-3" dark>SIGN UP</v-btn>
+                        <v-btn 
+                        rounded color="teal accent-3" dark>SIGN UP</v-btn>
                       </div>
                     </v-col>
                   </v-row>

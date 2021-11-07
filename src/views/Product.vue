@@ -11,9 +11,9 @@
 
         <v-btn class="ma-2" outlined color="white" href="/Farm"> Farm </v-btn>
 
-        <v-btn class="ma-2" outlined color="white" href="/Product"> Product </v-btn>
+        <v-btn class="ma-2" outlined color="white"> Product </v-btn>
 
-        <v-btn class="ma-2" outlined color="white" href="/Pig"> Pig </v-btn>
+        <v-btn class="ma-2" outlined color="white"> Pig </v-btn>
 
         <div class="text-center">
           <v-dialog v-model="dialog">
@@ -132,16 +132,15 @@
             <v-img
               class="black--text align-end"
               height="175px"
-              src="../assets/pig1.png"
+              src="../assets/ham1.png"
             >
             </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 200 Baht</v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
             </v-card-text>
 
             <v-card-actions>
@@ -156,16 +155,15 @@
             <v-img
               class="black--text align-end"
               height="175px"
-              src="../assets/pig2.png"
+              src="../assets/ham2.png"
             >
             </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 250 Baht</v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
             </v-card-text>
 
             <v-card-actions>
@@ -180,16 +178,15 @@
             <v-img
               class="black--text align-end"
               height="175px"
-              src="../assets/pig3.png"
+              src="../assets/ham3.png"
             >
             </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 220 Baht</v-card-subtitle>
 
-            <v-card-text color="red lighten-5" class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
+            <v-card-text class="text--primary">
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
             </v-card-text>
 
             <v-card-actions>
@@ -201,23 +198,24 @@
         </v-col>
       </v-row>
 
-      <v-row no-gutters>
-        <v-col> </v-col>
+        <v-row>
+            <v-col>
+                
+            </v-col>
         <v-col>
           <v-card color="red lighten-5" class="mx-auto" max-width="320">
             <v-img
               class="black--text align-end"
               height="175px"
-              src="../assets/pig1.png"
+              src="../assets/ham1.png"
             >
             </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 200 Baht</v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
             </v-card-text>
 
             <v-card-actions>
@@ -232,16 +230,15 @@
             <v-img
               class="black--text align-end"
               height="175px"
-              src="../assets/pig2.png"
+              src="../assets/ham2.png"
             >
             </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 250 Baht</v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
             </v-card-text>
 
             <v-card-actions>
@@ -256,16 +253,15 @@
             <v-img
               class="black--text align-end"
               height="175px"
-              src="../assets/pig3.png"
+              src="../assets/ham3.png"
             >
             </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 220 Baht</v-card-subtitle>
 
-            <v-card-text color="red lighten-5" class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
+            <v-card-text class="text--primary">
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
             </v-card-text>
 
             <v-card-actions>
@@ -276,6 +272,7 @@
           </v-card>
         </v-col>
       </v-row>
+      
     </v-img>
 
     <v-footer dark padless>

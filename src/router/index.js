@@ -24,9 +24,15 @@ const routes = [
   },
   {
     path: '/pig',
-    name: 'Farm',
+    name: 'Pig',
     component: () => import('../views/Pig.vue')
+  },
+  {
+    path: '/product',
+    name: 'Product',
+    component: () => import('../views/Product.vue')
   }
+  
 ]
 
 const router = new VueRouter({

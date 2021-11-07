@@ -35,6 +35,7 @@
       class="ma-2"
       outlined
       color="white"
+
     >
       Product
     </v-btn>
@@ -43,17 +44,54 @@
       class="ma-2"
       outlined
       color="white"
+      href="/Pig"
     >
       Pig
     </v-btn>
 
-    <v-btn
-      class="ma-2"
-      outlined
-      color="white"
+    <div class="text-center">
+    <v-dialog
+      v-model="dialog"
+      
     >
-      Cart
-    </v-btn>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          class="ma-2"
+          outlined
+          color="white"
+          v-bind="attrs"
+          v-on="on"
+        >
+          Cart
+        </v-btn>
+      </template>
+
+      <v-card>
+        <v-card-title 
+        class="red accent-1">
+          Cart
+        </v-card-title>
+
+        <v-card-text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+            I accept
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </div>
+
 
     <v-btn
       class="ma-2"
@@ -172,4 +210,12 @@ filter: drop-shadow(10px 10px 4px #D81B60);
   }
 </script>
 
-
+<script>
+  export default {
+    data () {
+      return {
+        dialog: false,
+      }
+    },
+  }
+</script>

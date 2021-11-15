@@ -11,9 +11,9 @@
 
         <v-btn class="ma-2" outlined color="white" href="/Farm"> Farm </v-btn>
 
-        <v-btn class="ma-2" outlined color="white"> Product </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/Product"> Product </v-btn>
 
-        <v-btn class="ma-2" outlined color="white"> Pig </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/Pig"> Pig </v-btn>
 
         <div class="text-center">
           <v-dialog v-model="dialog">

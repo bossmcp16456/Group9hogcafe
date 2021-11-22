@@ -10,6 +10,7 @@
 
         <v-btn class="ma-2" outlined color="white" href="/Farm"> Farm </v-btn>
 
+
         <v-btn class="ma-2" outlined color="white" href="/Product"> Product </v-btn>
 
         <v-btn class="ma-2" outlined color="white" href="/Pig"> Pig </v-btn>
@@ -54,6 +55,15 @@
         </div>
 
         <v-btn class="ma-2" outlined color="white" href="updatedata"> Profile </v-btn>
+=======
+        <v-btn class="ma-2" outlined color="white"> Product </v-btn>
+
+        <v-btn class="ma-2" outlined color="white"> Pig </v-btn>
+
+        <v-btn class="ma-2" outlined color="white"> Cart </v-btn>
+
+        <v-btn class="ma-2" outlined color="white"> Profile </v-btn>
+
       </v-toolbar>
     </v-card>
 

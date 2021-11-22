@@ -18,7 +18,7 @@
         <v-btn class="ma-2" outlined color="white" href="/Pig"> Pig </v-btn>
 
         <div class="text-center">
-          <v-dialog v-model="dialog">
+          <v-dialog v-model="dialog" width="500px">
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 class="ma-2"
@@ -31,7 +31,7 @@
               </v-btn>
             </template>
 
-            <v-card>
+            <v-card height="300px">
               <v-card-title class="red accent-1"> Cart </v-card-title>
 
               <v-card-text>
@@ -56,7 +56,7 @@
           </v-dialog>
         </div>
 
-        <v-btn class="ma-2" outlined color="white"> Profile </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/updatedata"> Profile </v-btn>
       </v-toolbar>
     </v-card>
     <v-img src="../assets/bg.png">
@@ -133,6 +133,13 @@
 #inspire {
   height: 100vh;
 }
+.v-dialog {
+    position: absolute;
+    top: 41px;
+    
+    
+}
+
 </style>
 
 <script>
@@ -144,11 +151,11 @@ export default {
 </script>
 
 <script>
-export default {
-  data() {
-    return {
-      dialog: false,
-    };
-  },
-};
+  export default {
+    data () {
+      return {
+        dialog: false,
+      }
+    },
+  }
 </script>

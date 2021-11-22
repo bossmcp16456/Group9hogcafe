@@ -56,7 +56,7 @@
           </v-dialog>
         </div>
 
-        <v-btn class="ma-2" outlined color="white"> Profile </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/updatedata"> Profile </v-btn>
       </v-toolbar>
     </v-card>
     <v-img src="../assets/bg.png">

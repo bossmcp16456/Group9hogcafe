@@ -24,11 +24,6 @@ const routes = [
     path: '/lobby',
     name: 'Lobby',
     component: () => import(/* webpackChunkName: "about" */ '../views/Lobby.vue')
-=======
-    path: '/Lobby',
-    name: 'Lobby',
-    
-    component: () => import('../views/Lobby.vue')
   },
   {
     path: '/farm',
@@ -44,6 +39,21 @@ const routes = [
     path: '/product',
     name: 'Product',
     component: () => import('../views/Product.vue')
+    
+
+  },
+  {
+    path: '/lb',
+    name: 'lb',
+    component: () => import('../views/Lobby.vue')
+    
+
+  },
+  {
+    path: '/updatedata',
+    name: 'updatedata',
+    component: () => import('../views/updatedata.vue')
+    
 
   }
   

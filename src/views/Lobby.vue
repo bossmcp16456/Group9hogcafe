@@ -2,21 +2,16 @@
 <template>
   <v-app id="inspire">
     <v-card>
-      <v-toolbar color="deep-orange lighten-1" dark flat>
-        <v-toolbar-title>Hog Cafe</v-toolbar-title>
+      <v-toolbar color="#FF6752" dark flat>
+        
+        <v-toolbar-title> <v-img class="hog" src="../assets/aaa.png"></v-img> </v-toolbar-title>
 
         <v-spacer></v-spacer>
 
-        <v-btn class="ma-2" outlined color="white" href="/Lobby"> Home </v-btn>
-
-        <v-btn class="ma-2" outlined color="white" href="/Farm"> Farm </v-btn>
-
-        <v-btn class="ma-2" outlined color="white" href="/Product">
-          Product
-        </v-btn>
-
-        <v-btn class="ma-2" outlined color="white" href="/Pig"> Pig </v-btn>
-
+    <v-btn class="ma-2" outlined color="white" href="/Lobby"  > <v-icon left>mdi-home</v-icon><span>Home </span> </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/Farm"> <v-icon left>mdi-shovel</v-icon><span>Farm </span> </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/Product">    <v-icon left>mdi-hexagon</v-icon><span>Product </span> </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/Pig"> <v-icon left>mdi-pig</v-icon><span>Pig </span> </v-btn>
         <div class="text-center">
           <v-dialog v-model="dialog" width="500px">
             <template v-slot:activator="{ on, attrs }">
@@ -27,7 +22,7 @@
                 v-bind="attrs"
                 v-on="on"
               >
-                Cart
+               <v-icon left>mdi-cart</v-icon><span>Cart </span>
               </v-btn>
             </template>
 
@@ -56,17 +51,17 @@
           </v-dialog>
         </div>
 
-        <v-btn class="ma-2" outlined color="white" href="/updatedata"> Profile </v-btn>
+        <v-btn class="ma-2" outlined color="white" href="/updatedata"> <v-icon left>mdi-account</v-icon><span>Profile </span> </v-btn>
       </v-toolbar>
     </v-card>
-    <v-img src="../assets/bg.png">
+    <v-img src="../assets/Frame.svg">
       <h1 class="wel">Welcome to GTB Farm <br />Chiang Rai.</h1>
       <h2 class="jon">
         Join the farm to make a difference for your<br />
         life and the environment.
       </h2>
       <v-btn class="button white--text" depressed color="#FF8A80">
-        Go to Stone
+        Go to Store
       </v-btn>
       <v-btn class="button white--text" depressed color="#FF8A80">
         Learn more
@@ -76,10 +71,8 @@
 
     <v-footer dark padless>
       <v-card class="flex" flat tile>
-        <v-card-title class="red lighten-3">
-          <strong class="subheading"
-            >Developer 6331305016 6331305022 6331305038</strong
-          >
+        <v-card-title class="#FF8484">
+          <strong class="subheading" > <p>  Hogcafe<br>Contect us <br> 6331305016@lamduan.mfu.ac.th <br>6331305022@lamduan.mfu.ac.th <br>6331305038@lamduan.mfu.ac.th </p></strong>
 
           <v-spacer></v-spacer>
 
@@ -96,10 +89,17 @@
         </v-card-text>
       </v-card>
     </v-footer>
+    
   </v-app>
+
 </template>
 
 <style>
+.hog{
+  width: 160px;
+  height: 70px;
+  margin-left: 40px;
+}
 .wel {
   margin-top: 50px;
   margin-left: 30px;
@@ -146,16 +146,9 @@
 export default {
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+       dialog: false,
   }),
 };
 </script>
 
-<script>
-  export default {
-    data () {
-      return {
-        dialog: false,
-      }
-    },
-  }
-</script>
+

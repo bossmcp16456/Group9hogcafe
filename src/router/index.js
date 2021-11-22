@@ -24,11 +24,6 @@ const routes = [
     path: '/lobby',
     name: 'Lobby',
     component: () => import(/* webpackChunkName: "about" */ '../views/Lobby.vue')
-=======
-    path: '/Lobby',
-    name: 'Lobby',
-    
-    component: () => import('../views/Lobby.vue')
   },
   {
     path: '/farm',

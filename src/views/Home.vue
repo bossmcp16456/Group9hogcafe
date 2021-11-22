@@ -1,146 +1,213 @@
 <template>
-  <v-app id="inspire">
-    <v-content>
-      <v-container class="fill-height" fluid>
-        <v-row align="center" justify="center">
-          <v-col cols="12" sm="8" md="8">
-            <v-card class="elevation-12">
-              <v-window v-model="step">
+  <v-container>
+      <v-row align="center" justify="center" >
+          <v-col cols="12" sm="10">
+            <v-card class="elevation-6 mt-10"  >
+             <v-window v-model="step">
                 <v-window-item :value="1">
                   <v-row>
-                    <v-col cols="12" md="8">
+                    <v-col cols="12" md="6">
                       <v-card-text class="mt-12">
-                        <h1
-                          class="text-center display-2 teal--text text--accent-3"
-                        >Sign in to Diprella</h1>
-                        <div class="text-center mt-4">
-                          <v-btn class="mx-2" fab color="black" outlined>
-                            <v-icon>fab fa-facebook-f</v-icon>
-                          </v-btn>
-
-                          <v-btn class="mx-2" fab color="black" outlined>
-                            <v-icon>fab fa-google-plus-g</v-icon>
-                          </v-btn>
-                          <v-btn class="mx-2" fab color="black" outlined>
-                            <v-icon>fab fa-linkedin-in</v-icon>
-                          </v-btn>
-                        </div>
-                        <h4 class="text-center mt-4">Ensure your email for registration</h4>
-                        <v-form>
+                        <h4
+                          class="text-center"
+                        >Login in to Your Account</h4>
+                        <h6
+                          class="text-center  grey--text "
+                        >Log in to your account so you can continue builiding <br>and editing your onboarding flows</h6>
+                        <v-row align="center" justify="center">
+                          <v-col cols="12" sm="8">
+                           
                           <v-text-field
                             label="Email"
-                            name="Email"
-                            prepend-icon="email"
-                            type="text"
-                            color="teal accent-3"
+                            outlined
+                            dense
+                            color="blue"
+                            autocomplete="false"
+                           class="mt-16"
                           />
-
                           <v-text-field
-                            id="password"
                             label="Password"
-                            name="password"
-                            prepend-icon="lock"
-                            type="password"
-                            color="teal accent-3"
+                            outlined
+                            dense
+                            color="blue"
+                          autocomplete="false"
+                           type="password"
+                          
                           />
-                        </v-form>
-                        <h3 class="text-center mt-4">Forgot your password ?</h3>
+                            <v-row>
+                              <v-col cols="12" sm="7">
+                                <v-checkbox
+                       
+                        label="Remember Me"
+                        class="mt-n1"
+                        color="blue"
+                      > </v-checkbox>
+                              </v-col>
+                              <v-col cols="12" sm="5">
+                                <span class="caption orange--text">Forgot password</span>
+                              </v-col>
+                            </v-row>
+                          <v-btn color="deep-orange lighten-1" dark block tile href="/Lobby">Log in</v-btn>
+                     
+                         <h5
+                          class="text-center  grey--text mt-4 mb-3"
+                        >Or Log in using</h5>
+                         <div class="d-flex  justify-space-between align-center mx-10 mb-16">
+                        <v-btn depressed outlined color="grey">
+                          <v-icon color="red">fab fa-google</v-icon>
+                        </v-btn>
+                        <v-btn depressed outlined color="grey">
+                          <v-icon color="blue">fab fa-facebook-f</v-icon>
+                        </v-btn>
+                        <v-btn depressed outlined color="grey">
+                          <v-icon color="light-blue lighten-3">fab fa-twitter</v-icon>
+                        </v-btn>
+                         </div>
+                          </v-col>
+                        </v-row>  
                       </v-card-text>
-                      <div class="text-center mt-3">
-                        <v-btn rounded color="teal accent-3" dark>SIGN IN</v-btn>
-                      </div>
                     </v-col>
-                    <v-col cols="12" md="4" class="teal accent-3">
-                      <v-card-text class="white--text mt-12">
-                        <h1 class="text-center display-1">Hello, Friend!</h1>
-                        <h5
+                    <v-col cols="12" md="6" class="deep-orange lighten-1 rounded-bl-xl" >
+                    <div style="  text-align: center; padding: 180px 0;">
+                      <v-card-text class="white--text" >
+                        <h3 class="text-center ">Don't Have an Account Yet?</h3>
+                        <h6
                           class="text-center"
-                        >Enter your personal details and start journay with us</h5>
+                        >Let's get you all set up so you can start creating your your first<br>  onboarding experience</h6>
                       </v-card-text>
                       <div class="text-center">
-                        <v-btn rounded outlined dark @click="step++">SIGN UP</v-btn>
+                        <v-btn tile outlined dark @click="step++">SIGN UP</v-btn>
+                      </div>
                       </div>
                     </v-col>
                   </v-row>
                 </v-window-item>
                 <v-window-item :value="2">
-                  <v-row class="fill-height">
-                    <v-col cols="12" md="4" class="teal accent-3">
-                      <v-card-text class="white--text mt-12">
-                        <h1 class="text-center display-1">Welcome Back!</h1>
-                        <h5
+                  <v-row >
+                    <v-col cols="12" md="6" class="deep-orange lighten-1 rounded-br-xl">
+                     <div style="  text-align: center; padding: 180px 0;">
+                      <v-card-text class="white--text" >
+                        <h3 class="text-center ">Alredy Signed up?</h3>
+                        <h6
                           class="text-center"
-                        >To Keep connected with us please login with your personnel info</h5>
+                        >Log in to your account so you can continue building and<br>  editing your onboarding flows</h6>
                       </v-card-text>
                       <div class="text-center">
-                        <v-btn rounded outlined dark @click="step--">Sign in</v-btn>
+                        <v-btn tile outlined dark @click="step--">Log in</v-btn>
+                      </div>
                       </div>
                     </v-col>
 
-                    <v-col cols="12" md="8">
+                    <v-col cols="12" md="6">
                       <v-card-text class="mt-12">
-                        <h1 class="text-center display-2 teal--text text--accent-3">Create Account</h1>
-                        <div class="text-center mt-4">
-                          <v-btn class="mx-2" fab color="black" outlined>
-                            <v-icon>fab fa-facebook-f</v-icon>
-                          </v-btn>
-
-                          <v-btn class="mx-2" fab color="black" outlined>
-                            <v-icon>fab fa-google-plus-g</v-icon>
-                          </v-btn>
-                          <v-btn class="mx-2" fab color="black" outlined>
-                            <v-icon>fab fa-linkedin-in</v-icon>
-                          </v-btn>
-                        </div>
-                        <h4 class="text-center mt-4">Ensure your email for registration</h4>
-                        <v-form>
-                          <v-text-field
-                            label="Name"
-                            name="Name"
-                            prepend-icon="person"
-                            type="text"
-                            color="teal accent-3"
+                        <h4
+                          class="text-center"
+                        >Sign Up for an Account</h4>
+                        <h6
+                          class="text-center  grey--text "
+                        >Let's get you all set up so you can start creatin your <br>
+                        first onboarding experiance</h6>
+                        <v-row align="center" justify="center">
+                          <v-col cols="12" sm="8">
+                           <v-row>
+                           <v-col cols="12" sm="6">
+                            <v-text-field
+                            label="First Name"
+                            outlined
+                            dense
+                            color="blue"
+                            autocomplete="false"
+                           class="mt-4"
                           />
+                           </v-col>
+                           <v-col cols="12" sm="6">
+                            <v-text-field
+                            label="Last Name"
+                            outlined
+                            dense
+                            color="blue"
+                            autocomplete="false"
+                           class="mt-4"
+                          />
+                           </v-col>
+                           </v-row>
                           <v-text-field
                             label="Email"
-                            name="Email"
-                            prepend-icon="email"
-                            type="text"
-                            color="teal accent-3"
+                            outlined
+                            dense
+                            color="blue"
+                            autocomplete="false"
                           />
-
                           <v-text-field
-                            id="password"
                             label="Password"
-                            name="password"
-                            prepend-icon="lock"
-                            type="password"
-                            color="teal accent-3"
+                            outlined
+                            dense
+                            color="blue"
+                          autocomplete="false"
+                           type="password"
+                          
                           />
-                        </v-form>
+                            <v-row>
+                              <v-col cols="12" sm="7">
+                                <v-checkbox
+                       
+                        label="I Accept AAE"
+                        class="mt-n1"
+                        color="blue"
+                      > </v-checkbox>
+                              </v-col>
+                              <v-col cols="12" sm="5">
+                                <span class="caption orange--text ml-n4">Terms &Conditions</span>
+                              </v-col>
+                            </v-row>
+                          <v-btn color="deep-orange lighten-1" dark block tile>Sign up</v-btn>
+                     
+                         <h5
+                          class="text-center  grey--text mt-4 mb-3"
+                        >Or Sign up using</h5>
+                         <div class="d-flex  justify-space-between align-center mx-10 mb-11">
+                        <v-btn depressed outlined color="grey">
+                          <v-icon color="red">fab fa-google</v-icon>
+                        </v-btn>
+                        <v-btn depressed outlined color="grey">
+                          <v-icon color="blue">fab fa-facebook-f</v-icon>
+                        </v-btn>
+                        <v-btn depressed outlined color="grey">
+                          <v-icon color="light-blue lighten-3">fab fa-twitter</v-icon>
+                        </v-btn>
+                         </div>
+                          </v-col>
+                        </v-row>  
                       </v-card-text>
-                      <div class="text-center mt-n5">
-                        <v-btn rounded color="teal accent-3" dark>SIGN UP</v-btn>
-                      </div>
                     </v-col>
                   </v-row>
                 </v-window-item>
               </v-window>
             </v-card>
           </v-col>
-        </v-row>
-      </v-container>
-    </v-content>
-  </v-app>
+      </v-row>
+  </v-container>
 </template>
 
 <script>
-export default {
-  data: () => ({
+  
+
+  export default {
+   data: () => ({
     step: 1
   }),
   props: {
     source: String
+  } 
+
+    
   }
-};
 </script>
+<style scoped>
+.v-application .rounded-bl-xl {
+    border-bottom-left-radius: 300px !important;
+}
+.v-application .rounded-br-xl {
+    border-bottom-right-radius: 300px !important;
+}
+</style>

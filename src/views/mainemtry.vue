@@ -13,9 +13,7 @@
 
         <v-btn class="ma-2" outlined color="white" href="/Lobby"  > <v-icon left>mdi-home</v-icon><span>Home </span> </v-btn>
         <v-btn class="ma-2" outlined color="white" href="/Farm"> <v-icon left>mdi-shovel</v-icon><span>Farm </span> </v-btn>
-
         <v-btn class="ma-2" outlined color="white" href="/Product">    <v-icon left>mdi-hexagon</v-icon><span>Product </span> </v-btn>
-
         <v-btn class="ma-2" outlined color="white" href="/Pig"> <v-icon left>mdi-pig</v-icon><span>Pig </span> </v-btn>
 
         <div class="text-center">

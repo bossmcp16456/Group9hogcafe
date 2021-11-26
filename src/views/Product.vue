@@ -272,6 +272,81 @@
           </v-card>
         </v-col>
       </v-row>
+
+      <v-row>
+            <v-col>
+                
+            </v-col>
+        <v-col>
+          <v-card color="red lighten-5" class="mx-auto" max-width="320">
+            <v-img
+              class="black--text align-end"
+              height="175px"
+              src="../assets/ham1.png"
+            >
+            </v-img>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 200 Baht</v-card-subtitle>
+
+            <v-card-text class="text--primary">
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Chat </v-btn>
+
+              <v-btn color="orange" text> Add to Cart </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col order="12">
+          <v-card color="red lighten-5" class="mx-auto" max-width="320">
+            <v-img
+              class="black--text align-end"
+              height="175px"
+              src="../assets/ham2.png"
+            >
+            </v-img>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 250 Baht</v-card-subtitle>
+
+            <v-card-text class="text--primary">
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Chat </v-btn>
+
+              <v-btn color="orange" text> Add to Cart </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col order="1">
+          <v-card color="red lighten-5" class="mx-auto" max-width="320">
+            <v-img
+              class="black--text align-end"
+              height="175px"
+              src="../assets/ham3.png"
+            >
+            </v-img>
+            <v-card-title>Ham form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 220 Baht</v-card-subtitle>
+
+            <v-card-text class="text--primary">
+              <div>From : GTB Farm</div>
+              <div>Good Ham for you baby</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Chat </v-btn>
+
+              <v-btn color="orange" text> Add to Cart </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
       
     </v-img>
 

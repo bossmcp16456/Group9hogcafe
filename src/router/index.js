@@ -12,7 +12,11 @@ const routes = [
     component: Home
   },
   {
+<<<<<<< Updated upstream
     path: '/Lobby',
+=======
+    path: '/lobby',
+>>>>>>> Stashed changes
     name: 'Lobby',
     
     component: () => import('../views/Lobby.vue')
@@ -36,8 +40,19 @@ const routes = [
     path: '/updatedata',
     name: 'updatedata',
     component: () => import('../views/updatedata.vue')
+<<<<<<< Updated upstream
+=======
+    
+
+  },
+  {
+    path: '/edit',
+    name: 'edit',
+    component: () => import('../views/Edit.vue')
+    
+
+>>>>>>> Stashed changes
   }
-  
 ]
 
 const router = new VueRouter({
@@ -47,3 +62,5 @@ const router = new VueRouter({
 })
 
 export default router
+
+

@@ -276,6 +276,83 @@
           </v-card>
         </v-col>
       </v-row>
+
+      <v-row no-gutters>
+        <v-col> </v-col>
+        <v-col>
+          <v-card color="red lighten-5" class="mx-auto" max-width="320">
+            <v-img
+              class="black--text align-end"
+              height="175px"
+              src="../assets/pig1.png"
+            >
+            </v-img>
+            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+
+            <v-card-text class="text--primary">
+              <div>Age : 1 year</div>
+
+              <div>15 kg. Gender : male</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Chat </v-btn>
+
+              <v-btn color="orange" text> Add to Cart </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col order="12">
+          <v-card color="red lighten-5" class="mx-auto" max-width="320">
+            <v-img
+              class="black--text align-end"
+              height="175px"
+              src="../assets/pig2.png"
+            >
+            </v-img>
+            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+
+            <v-card-text class="text--primary">
+              <div>Age : 1 year</div>
+
+              <div>15 kg. Gender : male</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Chat </v-btn>
+
+              <v-btn color="orange" text> Add to Cart </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col order="1">
+          <v-card color="red lighten-5" class="mx-auto" max-width="320">
+            <v-img
+              class="black--text align-end"
+              height="175px"
+              src="../assets/pig3.png"
+            >
+            </v-img>
+            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
+            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
+
+            <v-card-text color="red lighten-5" class="text--primary">
+              <div>Age : 1 year</div>
+
+              <div>15 kg. Gender : male</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Chat </v-btn>
+
+              <v-btn color="orange" text> Add to Cart </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+      
     </v-img>
 
     <v-footer dark padless>

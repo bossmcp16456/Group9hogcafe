@@ -55,6 +55,13 @@ const routes = [
     component: () => import('../views/updatedata.vue')
     
 
+  },
+  {
+    path: '/data',
+    name: 'data',
+    component: () => import('../views/data.vue')
+    
+
   }
   
 ]

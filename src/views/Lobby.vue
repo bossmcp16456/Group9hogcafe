@@ -63,6 +63,7 @@
       <v-btn class="button white--text" depressed color="#FF8A80">
         Go to Store
       </v-btn>
+      
       <v-btn class="button white--text" depressed color="#FF8A80">
         Learn more
       </v-btn>

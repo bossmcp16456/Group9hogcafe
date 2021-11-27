@@ -56,222 +56,54 @@
     </v-card>
     <v-img src="../assets/Frame.svg">
       <v-row no-gutters>
-        <v-col>
-          <v-card color="red lighten-5" class="mx-auto" max-width="300">
-            <v-subheader>Filter</v-subheader>
+      
+        
+        
+          
+         <v-layout wrap>
+      <v-flex lg3 md3 sm4 xs6 v-for="(Pig, idx) in this.HOME" :key="idx">
+        <v-card
+    class="mx-auto"
+    max-width="400"
+  >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      :src="Pig.Picture"
+    >
+      <v-card-title></v-card-title>
+    </v-img>
 
-            <v-list-item-group v-model="settings" multiple>
-              <v-list-item>
-                <template v-slot:default="{ active }">
-                  <v-list-item-action>
-                    <v-checkbox
-                      :input-value="active"
-                      color="primary"
-                    ></v-checkbox>
-                  </v-list-item-action>
+    <v-card-subtitle class="pb-0">
+      Pig from farm
+    </v-card-subtitle>
 
-                  <v-list-item-content>
-                    <v-list-item-title>Local Farm</v-list-item-title>                    
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
+    <v-card-text class="text--primary">
+     <div>ID = {{Pig.id}}</div>
+      <div>Price = {{Pig.price}} Baht</div>
+       <div>Weight = {{Pig.weight}} Kg.</div>
+        <div>Gender = {{Pig.gender}}</div>
+    </v-card-text>
 
-              <v-list-item>
-                <template v-slot:default="{ active }">
-                  <v-list-item-action>
-                    <v-checkbox
-                      :input-value="active"
-                      color="primary"
-                    ></v-checkbox>
-                  </v-list-item-action>
+    <v-card-actions>
+      <v-btn
+        color="orange"
+        text
+      >
+        chat
+      </v-btn>
 
-                  <v-list-item-content>
-                    <v-list-item-title>Male</v-list-item-title>
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
-
-              <v-list-item>
-                <template v-slot:default="{ active }">
-                  <v-list-item-action>
-                    <v-checkbox
-                      :input-value="active"
-                      color="primary"
-                    ></v-checkbox>
-                  </v-list-item-action>
-
-                  <v-list-item-content>
-                    <v-list-item-title>Female</v-list-item-title>
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
-
-              <v-list-item>
-                <template v-slot:default="{ active }">
-                  <v-list-item-action>
-                    <v-checkbox
-                      :input-value="active"
-                      color="primary"
-                    ></v-checkbox>
-                  </v-list-item-action>
-
-                  <v-list-item-content>
-                    <v-list-item-title>Most Rated</v-list-item-title>
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
-            </v-list-item-group>
-          </v-card>
-        </v-col>
-
-        <v-col>
-          <v-card color="red lighten-5" class="mx-auto" max-width="320">
-            <v-img
-              class="black--text align-end"
-              height="175px"
-              src="../assets/pig1.png"
-            >
-            </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
-
-            <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Chat </v-btn>
-
-              <v-btn color="orange" text> Add to Cart </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col order="12">
-          <v-card color="red lighten-5" class="mx-auto" max-width="320">
-            <v-img
-              class="black--text align-end"
-              height="175px"
-              src="../assets/pig2.png"
-            >
-            </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
-
-            <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Chat </v-btn>
-
-              <v-btn color="orange" text> Add to Cart </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col order="1">
-          <v-card color="red lighten-5" class="mx-auto" max-width="320">
-            <v-img
-              class="black--text align-end"
-              height="175px"
-              src="../assets/pig3.png"
-            >
-            </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
-
-            <v-card-text color="red lighten-5" class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Chat </v-btn>
-
-              <v-btn color="orange" text> Add to Cart </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-
-      <v-row no-gutters>
-        <v-col> </v-col>
-        <v-col>
-          <v-card color="red lighten-5" class="mx-auto" max-width="320">
-            <v-img
-              class="black--text align-end"
-              height="175px"
-              src="../assets/pig1.png"
-            >
-            </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
-
-            <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Chat </v-btn>
-
-              <v-btn color="orange" text> Add to Cart </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col order="12">
-          <v-card color="red lighten-5" class="mx-auto" max-width="320">
-            <v-img
-              class="black--text align-end"
-              height="175px"
-              src="../assets/pig2.png"
-            >
-            </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
-
-            <v-card-text class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Chat </v-btn>
-
-              <v-btn color="orange" text> Add to Cart </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col order="1">
-          <v-card color="red lighten-5" class="mx-auto" max-width="320">
-            <v-img
-              class="black--text align-end"
-              height="175px"
-              src="../assets/pig3.png"
-            >
-            </v-img>
-            <v-card-title>Pigs form local farm in Chiang rai</v-card-title>
-            <v-card-subtitle class="pb-0"> $ 3250 Baht</v-card-subtitle>
-
-            <v-card-text color="red lighten-5" class="text--primary">
-              <div>Age : 1 year</div>
-
-              <div>15 kg. Gender : male</div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Chat </v-btn>
-
-              <v-btn color="orange" text> Add to Cart </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
+      <v-btn
+        color="orange"
+        text
+      >
+        add to cart
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+      </v-flex>
+    </v-layout>
+        
       </v-row>
     </v-img>
 
@@ -309,18 +141,39 @@
   margin-left: 40px;
 }
 </style>
-
-
 <script>
 export default {
-  data() {
-    return {
+  data (){
+    return{
        icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
       dialog: false,
-    };
+    HOME:[],
+    search:""
+    }
+  },
+  created() {
+    
+    this.initialize();
+  },
+  methods: {
+    async initialize() {
+         
+      const axios = require('axios');
+
+    axios.get('http://selab.mfu.ac.th:7416/api/Pig').then(resp => {
+
+
+    console.log(resp.data.data);
+    this.HOME=resp.data.data;
+    
+
+});
+    },
   },
 };
 </script>
+
+
 
 
 

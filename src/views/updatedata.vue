@@ -371,3 +371,7 @@ export default {
   },
 };
 </script>
+<script>
+let app = new Vue({
+})
+</script>

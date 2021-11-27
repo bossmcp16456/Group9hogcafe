@@ -79,6 +79,7 @@
                         <v-btn tile outlined dark @click="step++">SIGN UP</v-btn>
                       </div>
                       </div>
+                      
                     </v-col>
                   </v-row>
                 </v-window-item>
@@ -110,41 +111,59 @@
                         <v-row align="center" justify="center">
                           <v-col cols="12" sm="8">
                            <v-row>
-                           <v-col cols="12" sm="6">
+                           <v-col cols="12" >
                             <v-text-field
-                            label="First Name"
+                            label="Name"
                             outlined
                             dense
                             color="blue"
                             autocomplete="false"
-                           class="mt-4"
+                           
                           />
-                           </v-col>
-                           <v-col cols="12" sm="6">
+                                                     
                             <v-text-field
-                            label="Last Name"
+                            label="Address"
                             outlined
                             dense
                             color="blue"
                             autocomplete="false"
-                           class="mt-4"
+                          
                           />
                            </v-col>
                            </v-row>
-                          <v-text-field
-                            label="Email"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                          />
                           <v-text-field
                             label="Password"
                             outlined
                             dense
                             color="blue"
+                            autocomplete="false"
+                            type="password"
+                          />
+                          <v-text-field
+                            label="Email"
+                            outlined
+                            dense
+                            color="blue"
                           autocomplete="false"
-                           type="password"
+                           
+                          
+                          />
+                          <v-text-field
+                            label="Telephone"
+                            outlined
+                            dense
+                            color="blue"
+                          autocomplete="false"
+                           
+                          
+                          />
+                          <v-text-field
+                            label="ID CARD"
+                            outlined
+                            dense
+                            color="blue"
+                          autocomplete="false"
+                          
                           
                           />
                             <v-row>
@@ -160,7 +179,7 @@
                                 <span class="caption orange--text ml-n4">Terms &Conditions</span>
                               </v-col>
                             </v-row>
-                          <v-btn color="deep-orange lighten-1" dark block tile>Sign up</v-btn>
+                          <v-btn color="deep-orange lighten-1" dark block tile @click="created()">Sign up</v-btn>
                      
                          <h5
                           class="text-center  grey--text mt-4 mb-3"
@@ -193,16 +212,22 @@
   
 
   export default {
+    
    data: () => ({
     step: 1
   }),
   props: {
     source: String
-  } 
-
-    
   }
+  
+  }
+  
 </script>
+
+
+
+
+
 <style scoped>
 .v-application .rounded-bl-xl {
     border-bottom-left-radius: 300px !important;

@@ -82,7 +82,7 @@
       <div>Name = {{ProductFromPig.name}}</div>
        <div>MFG = {{ProductFromPig.mfg}}</div>
         <div>EXP = {{ProductFromPig.exp}}</div>
-         <div>Price = {{ProductFromPig.price}}</div>
+         <div>Price = {{ProductFromPig.price}} Baht</div>
     </v-card-text>
 
     <v-card-actions>

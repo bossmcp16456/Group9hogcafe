@@ -22,6 +22,7 @@
                           color="blue"
                           autocomplete="false"
                           class="mt-16"
+                          v-model="loginc.email"
                         />
                         <v-text-field
                           label="Password"
@@ -30,6 +31,7 @@
                           color="blue"
                           autocomplete="false"
                           type="password"
+                          v-model="loginc.password"
                         />
                         <v-row>
                           <v-col cols="12" sm="7">
@@ -51,7 +53,7 @@
                           dark
                           block
                           tile
-                          href="/Lobby"
+                          @click="ok()"
                           >Log in</v-btn
                         >
 
@@ -262,7 +264,6 @@ export default {
     // cardid: "",
     step: 1,
     editedItem: {
-      
       name: "",
       password: "",
       email: "",
@@ -270,35 +271,76 @@ export default {
       telephone: "",
       card_id: "",
     },
-    
+    loginc: {
+      email: "",
+      password: "",
+    },
+    data1() {
+      return {
+        loginc: {
+          email: "",
+          password: "",
+        },
+      };
+    },
   }),
-
 
   methods: {
     async save() {
-     const axios = require('axios');
+      const axios = require("axios");
 
-    //let payload = { name: 'John Doe', occupation: 'gardener' };
+      //let payload = { name: 'John Doe', occupation: 'gardener' };
 
-    let res = await axios.post('http://selab.mfu.ac.th:7416/api/Customeradd', this.editedItem);
+      let res = await axios.post(
+        "http://selab.mfu.ac.th:7416/api/Customeradd",
+        this.editedItem
+      );
 
-    let data = res.data;
-    console.log(data);
-    console.log(this.editedItem);
-    alert("Register successful");
-    this.reset();
-   
-
+      let data = res.data;
+      console.log(data);
+      console.log(this.editedItem);
+      alert("Register successful");
+      this.reset();
     },
-    reset(){
-      
-      this.editedItem.name="";
-      this.editedItem.password="";
-      this.editedItem.address="";
-      this.editedItem.card_id="";
-      this.editedItem.telephone="";
-      this.editedItem.email="";
-    }
+    reset() {
+      this.editedItem.name = "";
+      this.editedItem.password = "";
+      this.editedItem.address = "";
+      this.editedItem.card_id = "";
+      this.editedItem.telephone = "";
+      this.editedItem.email = "";
+    },
+
+    ok() {
+      const axios = require("axios");
+      if (this.loginc.email != "" && this.loginc.password != "") {
+        axios
+          .get("http://selab.mfu.ac.th:7416/api/Customer/", {
+            params: {
+              user: this.loginc.email,
+              pass: this.loginc.password,
+            },
+           
+          })
+          .then((data1) => {
+            if (data1.data1.response.length == 0) {
+              alert("Username or password wrong ");
+            } else {
+              var user = JSON.stringify(data1.data1.response);
+              console.log(user);
+              window.sessionStorage.setItem("user", user);
+              this.$router.push({
+                path: "/Lobby",
+              });
+            }
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      } else {
+        alert("Please fill out the information correctly.");
+      }
+    },
   },
   props: {
     source: String,
@@ -306,14 +348,11 @@ export default {
 };
 </script>
 
-
-
-
-
 <style scoped>
 .v-application .rounded-bl-xl {
   border-bottom-left-radius: 300px !important;
 }
+
 .v-application .rounded-br-xl {
   border-bottom-right-radius: 300px !important;
 }

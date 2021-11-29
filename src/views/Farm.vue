@@ -23,7 +23,7 @@
                 v-bind="attrs"
                 v-on="on"
               >
-               <v-icon left>mdi-cart</v-icon><span>Cart </span>
+               <v-icon left>mdi-cart</v-icon><span>0 Cart </span>
               </v-btn>
             </template>
 

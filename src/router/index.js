@@ -12,11 +12,8 @@ const routes = [
     component: Home
   },
   {
-<<<<<<< Updated upstream
+    
     path: '/Lobby',
-=======
-    path: '/lobby',
->>>>>>> Stashed changes
     name: 'Lobby',
     
     component: () => import('../views/Lobby.vue')
@@ -40,18 +37,11 @@ const routes = [
     path: '/updatedata',
     name: 'updatedata',
     component: () => import('../views/updatedata.vue')
-<<<<<<< Updated upstream
-=======
-    
-
   },
   {
-    path: '/edit',
-    name: 'edit',
+    path: '/Edit',
+    name: 'Edit',
     component: () => import('../views/Edit.vue')
-    
-
->>>>>>> Stashed changes
   }
 ]
 

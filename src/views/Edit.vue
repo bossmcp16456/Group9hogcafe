@@ -4,7 +4,7 @@
     <v-card>
       <v-toolbar color="#FF6752" dark flat>
         <v-toolbar-title>
-          <v-img class="hog" src="../assets/aaa.png"></v-img>
+          <v-img class="hog" src="../assets/logo.png"></v-img>
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
@@ -65,7 +65,7 @@
         </v-btn>
       </v-toolbar>
     </v-card>
-    <v-img src="../assets/Frame.svg">
+    <v-img src="../assets/bg.png">
       <v-card class="mx-auto edit" max-width="1200" color="red lighten-5">
         <v-row>
           <v-col>
@@ -91,13 +91,7 @@
 
               <v-divider></v-divider>
 
-              <v-list nav dense color="red lighten-4">
-                <v-list-item link>
-                  <v-list-item-icon>
-                    <v-icon>mdi-account-edit</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-title>Edit Image</v-list-item-title>
-                </v-list-item>
+              <v-list nav dense color="red lighten-4">   
                 <v-list-item link>
                   <v-list-item-icon>
                     <v-icon>mdi-table-edit</v-icon>

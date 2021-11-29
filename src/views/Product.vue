@@ -77,7 +77,7 @@
                 </v-dialog>
             </div>
 
-            <v-btn class="ma-2" outlined color="white" href="/updatedata">
+            <v-btn class="ma-2" outlined color="white" href="/Edit">
                 <v-icon left>mdi-account</v-icon><span>Profile </span>
             </v-btn>
         </v-toolbar>

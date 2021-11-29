@@ -75,7 +75,7 @@
                 </v-dialog>
             </div>
 
-            <v-btn class="ma-2" outlined color="white" href="/updatedata">
+            <v-btn class="ma-2" outlined color="white" href="/Edit">
                 <v-icon left>mdi-account</v-icon><span>Profile </span>
             </v-btn>
         </v-toolbar>
@@ -97,6 +97,7 @@
                         <v-card-text class="text--primary">
                             <div>ID = {{Pig.id}}</div>
                             <div>Price = {{Pig.price}} Baht</div>
+                            <div>Age = {{Pig.age}} Years</div>
                             <div>Weight = {{Pig.weight}} Kg.</div>
                             <div>Gender = {{Pig.gender}}</div>
                         </v-card-text>

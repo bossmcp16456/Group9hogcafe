@@ -62,14 +62,27 @@
                                     </v-card>
                                 </v-flex>
                             </v-layout>
+                            <h3 class="mt-10 mb-5 ml-8">Total price</h3>
+                            <v-btn disabled outlined class="ml-8">
+                                {{totalRequest}}
+                            </v-btn>
 
+                            <br>
+                            <v-row class=" mt-5 mb-5 ml-8">
+                                <h3 class="">Credit card </h3> <img src="https://cdn.discordapp.com/attachments/842308943078621234/915042178265387018/debit.png" alt="" width="120">
+                            </v-row>
+                            <v-text-field label="Order Header ID" outlined dense color="blue" autocomplete="false" class=" ml-8 mr-8" v-model="orderheader.header_id" />
+                            <v-text-field label="Date (yyyy-mm-dd)" outlined dense color="blue" autocomplete="false" class=" ml-8 mr-8" v-model="orderheader.date" />
+                            <v-text-field label="Credit card" outlined dense color="blue" autocomplete="false" class=" ml-8 mr-8" v-model="orderheader.credit" />
+                            <v-text-field label="Location" outlined dense color="blue" autocomplete="false" class="mb-8 ml-8 mr-8" v-model="orderheader.location" />
                         </v-card>
-
-                        <v-divider></v-divider>
 
                         <v-card-actions>
                             <v-spacer></v-spacer>
-                            <v-btn color="primary" text @click="dialog = false">
+                            <v-btn color="primary" text @click="reset">
+                                Reset
+                            </v-btn>
+                            <v-btn color="primary" text @click="save">
                                 I accept
                             </v-btn>
                         </v-card-actions>
@@ -86,8 +99,8 @@
         <v-row no-gutters>
 
             <v-layout class="popup" wrap>
-                <v-flex lg3 md3 sm4 xs6 v-for="(ProductFromPig, idx) in this.HOME" :key="idx">
-                    <v-card class="mx-auto" max-width="400px">
+                <v-flex lg3 md3 sm4 xs6 v-for="(ProductFromPig, idx) in this.HOME" :key="idx" class="mb-5">
+                    <v-card class="mx-auto" max-width="350px">
                         <v-img class="white--text align-end" height="200px" :src="ProductFromPig.Picture">
                             <v-card-title></v-card-title>
                         </v-img>
@@ -112,6 +125,7 @@
                         </v-card-actions>
                     </v-card>
                 </v-flex>
+
             </v-layout>
 
         </v-row>
@@ -163,21 +177,33 @@
 
 <script>
 export default {
-    item: {
-        id: "ProductFromPig.id",
-        name: "ProductFromPig.name",
-        price: "ProductFromPig.price",
-        Picture: "ProductFromPig.Picture",
+    // item: {
+    //     id: "ProductFromPig.id",
+    //     name: "ProductFromPig.name",
+    //     price: "ProductFromPig.price",
+    //     Picture: "ProductFromPig.Picture",
 
-    },
+    // },
     data() {
         return {
-           
+
             cart: [],
             icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
             dialog: false,
             HOME: [],
-            search: ""
+            search: "",
+            orderdetail: {
+                header_id: "",
+                price: "",
+                id: ""
+            },
+            orderheader: {
+                header_id: "",
+                date: "",
+                totalprice: "",
+                credit: "",
+                location: ""
+            }
 
         }
 
@@ -185,6 +211,13 @@ export default {
     created() {
 
         this.initialize();
+    },
+    computed: {
+
+        totalRequest() {
+            return this.cart.reduce((acc, item) => acc + item.price, 0);
+        }
+
     },
     methods: {
         async initialize() {
@@ -198,6 +231,35 @@ export default {
 
             });
         },
+        async save() {
+            this.orderdetail.header_id = this.orderheader.header_id
+            this.orderheader.totalprice = this.totalRequest
+            const axios = require("axios");
+
+            //let payload = { name: 'John Doe', occupation: 'gardener' };
+
+            let res = await axios.post(
+                "http://selab.mfu.ac.th:7416/api/AddOrderHeader",
+                this.orderheader
+            );
+
+            let data = res.data;
+            console.log(data);
+
+            for (let index = 0; index < this.cart.length; index++) {
+
+                this.orderdetail.id = this.cart[index].id;
+                this.orderdetail.price = this.cart[index].price;
+                await axios.post(
+                    "http://selab.mfu.ac.th:7416/api/AddOrderdetail",
+                    this.orderdetail
+                );
+
+            }
+
+            alert("Order Created");
+            this.reset();
+        },
         async addcart(product) {
 
             this.cart.push(product);
@@ -210,7 +272,13 @@ export default {
             console.log(product);
 
         },
-
+        reset() {
+            this.orderheader.header_id = "",
+                this.orderheader.date = "",
+                this.orderheader.credit = "",
+                this.cart = [],
+                this.orderheader.location = ""
+        }
     },
 
 };

@@ -50,6 +50,20 @@ const routes = [
 
   },
   {
+    path: '/Edit',
+    name: 'Edit',
+    component: () => import('../views/Edit.vue')
+    
+
+  },
+  {
+    path: '/data',
+    name: 'data',
+    component: () => import('../views/data.vue')
+    
+
+  },
+  {
     path: '/updatedata',
     name: 'updatedata',
     component: () => import('../views/updatedata.vue')

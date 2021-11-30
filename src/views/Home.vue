@@ -323,6 +323,7 @@ export default {
            
           })
           .then((data1) => {
+            console.log(data1);
             if (data1.data1.response.length == 0) {
               alert("Username or password wrong ");
             } else {
